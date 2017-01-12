@@ -2,6 +2,8 @@
 #include <vector>
 
 #include "printable.h"
+#include "employee.h"
+#include "office.h"
 
 /*
  * Функція print друкує інформацію про кожен об'єкт у списку. Ідея полягає у тому, що функція
@@ -58,7 +60,12 @@ int main()
     // інформацію у консоль.
 
     std::vector<Printable *> employeesToPrint;
-
+        Employee firstEmployee("Petya", 127001, "D:\\Home\\", 128, 1990);
+        Employee secondEmployee("Vasya", 187003, "D:\\Hotel\\", 148, 1998);
+        Employee thirdEmployee("Sasha", 122021, "D:\\Street\\", 100, 1993);
+        employeesToPrint.push_back(&firstEmployee);
+        employeesToPrint.push_back(&secondEmployee);
+        employeesToPrint.push_back(&thirdEmployee);
     // Створіть об'єкти Employee та наповніть список тут....
 
     printList(employeesToPrint);
@@ -68,6 +75,10 @@ int main()
     std::vector<Printable *> officesToPrint;
 
     // Створіть об'єкти Office та наповніть список тут....
+    Office firstOffice("Atarta", "C:\\Astarta\\", 10, 100);
+    Office secondOffice("ABTO", "C:\\ABTO\\", 2589, 102);
+    officesToPrint.push_back(&firstOffice);
+    officesToPrint.push_back(&secondOffice);
 
     printList(officesToPrint);
 
